@@ -1,8 +1,32 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {
+  isChrome,
+  isChromium,
+  isFirefox,
+  isOpera,  
+} from "react-device-detect";
 
 function App() {
+
+  useEffect(() => {
+    if (isChrome){
+      console.log('isChrome')
+    }
+
+    if (isChromium){
+      console.log('isChromium')
+    }
+
+    if (isFirefox){
+      console.log('isFirefox')
+    }
+
+    if (isOpera){
+      console.log('isOpera')
+    }
+  },[])
   return (
     <div className="App">
       <header className="App-header">
